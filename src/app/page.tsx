@@ -245,14 +245,7 @@ const Home = () => {
 
           {/* Social Icons */}
           <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', mb: 3 }}>
-            {/* <IconButton
-              component="a"
-              href="https://www.instagram.com/your-username" 
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <InstagramIcon />
-            </IconButton> */}
+         
 
             <IconButton
               component="a"
