@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <title>Latha Kumpatla</title>
+        <title>Sreenivas Bandapu</title>
        
         <link rel="icon" href="/favicon.ico" />
       </head>

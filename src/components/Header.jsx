@@ -145,7 +145,7 @@ const SideNav = () => {
   <WhatsAppIcon sx={{ fontSize: 32 }} />
 </IconButton>
         <Typography variant="body2" sx={{ color: '#8b8b9e', textAlign: 'center' }}>
-          &copy; 2025 Latha Kumpatla.
+          &copy; 2026 Sreenivas Bandapu.
         </Typography>
       </Box>
     </Box>
@@ -251,7 +251,7 @@ const SideNav = () => {
                   <WhatsAppIcon sx={{ fontSize: 32 }} />
                 </IconButton>
                 <Typography variant="body2" sx={{ color: '#8b8b9e', textAlign: 'center' }}>
-                  &copy; 2025 Latha Kumpatla.
+                  &copy; 2026 Sreenivas Bandapu.
                 </Typography>
               </Box>
             </Box>

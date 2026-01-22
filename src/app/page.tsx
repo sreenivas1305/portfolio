@@ -34,6 +34,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'; 
 import { useEffect, useRef, useState } from 'react';
 import { keyframes, useMediaQuery } from '@mui/system';
+import profileImg from '../../assets/profile.jpeg';
 import Preloader from '@/components/preloader';
 import { BackgroundElements } from '@/components/BackgroundElements';
 import { useSelector } from 'react-redux';
@@ -58,7 +59,7 @@ const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [showBackground, setShowBackground] = useState(true);
   const [flip, setFlip] = useState(false);
-  const phrase = '"Web & Mobile Application Developer"';
+  const phrase = 'Front-End Engineer | React, TypeScript, Next.js | Scalable Web Applications';
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
 
@@ -120,34 +121,24 @@ const Home = () => {
 
   const projects = [
     {
-      title: "Gcrs-Company Website",
-      description: "Created an interactive Rock-Paper-Scissors game with HTML, CSS, and JavaScript. This project was a great learning experience in building dynamic web applications.",
-      imageSrc: "gcrswebsite.png",
-    },
-    {
-      title: "Landscape Health Monitoring Tool – (GeoSust)",
-      description: "An interactive map-based tool for industrial sustainability. Users can upload or draw boundaries, screen environments, and manage data. Includes dashboards, layer toggling, and zoom features. Helps industries monitor and enhance sustainability efforts.",
-      imageSrc: "industry.png",
-    },
-    {
-      title: "Lake Management System (LAMAS)",
-      description: "Lake Management System (LAMAS), WebGIS tools, Water Sector sustainability analysis",
+      title: "LAMAS Platform — Administrative Staff College of India (ASCI)",
+      description: "Developed a Web GIS-based decision-support platform for national-level water resource planning initiatives. Built interactive dashboards, data visualizations, and REST API–driven modules for analytical insights.",
       imageSrc: "lamas.png",
     },
     {
-      title: "Development of Geoportal for Spatial Information Storage and Exchange, Spatial Data Infrastructure",
-      description: "Delivering climate services to Tajikistan by enabling disaster monitoring and building a growing community committed to climate resilience and risk reduction.",
-      imageSrc: "sdi.png",
+      title: "GeoRisk Platform — World Bank",
+      description: "Developed web-based risk assessment and sustainability analysis tools supporting early warning systems. Implemented scalable UI modules for data visualization and reporting workflows.",
+      imageSrc: "hppwb.png",
     },
     {
-      title: "Clean Tech - Mobile Application",
-      description: "Developed and maintained a mobile application using React Native to track and display sustainability performance metrics. Implemented interactive UI components, integrated APIs for real-time data updates, and ensured cross-platform compatibility to support WWF-India's clean tech initiatives.",
-      imageSrc: "cleantech.png",
+      title: "GeoSust Platform — Client: Aditya Birla Group",
+      description: "Led frontend development for the GeoSust sustainability platform, owning UI architecture and feature delivery. Reviewed and guided frontend code contributions to ensure code quality, performance, and best practices. Worked in parallel on multiple frontend tasks including feature enhancements, bug fixes, performance tuning, and UI improvements. Collaborated closely with backend teams and stakeholders to align frontend implementation with business requirements.",
+      imageSrc: "abg.png",
     },
     {
-      title: "Kondakarla AVA Mobile Application",
-      description: "Ticket Booking and Notifications, Kondakarla Ava mitra mobile platform is a user friendly mobile -application designed to explore the wetland React Native Developer",
-      imageSrc: "kondakarla.png",
+      title: "Personal Finance Analytics Dashboard",
+      description: "Designed and developed a responsive finance dashboard using React, Next.js, and Tailwind CSS. Implemented expense tracking, insights, and visualizations using Chart.js; deployed on Vercel.",
+      imageSrc: "personal.png",
     },
   ];
 
@@ -205,24 +196,28 @@ const Home = () => {
             pl: { xs: 2, sm: 6, md: 12, lg: 24, xl: 30 }, 
           }}
         >
-          <Avatar
-           src="/portfolio/avtar.webp"
+<Avatar
+  src="profile.jpeg"
+  alt="Sreenivas Bandapu"
+  imgProps={{
+    style: {
+      objectFit: 'cover',
+      objectPosition: '90% 40%', 
+    },
+  }}
+  sx={{
+    width: 180,
+    height: 180,
+    borderRadius: '50%',
+    backgroundColor: 'transparent',
+  }}
+/>
 
 
-            alt="Latha Kumpatla"
-            sx={{
-              width: 150,
-              height: 150,
-              border: 'none',
-              boxShadow: 'none',
-              padding: 0,
-              objectFit: 'cover',
-              backgroundColor: 'transparent',
-            }}
-          />
+
 
           <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1, fontSize: 40 }}>
-            Latha Kumpatla
+            Sreenivas Bandapu
           </Typography>
 
           <Box sx={{ display: 'inline-flex', alignItems: 'center', mb: 3 }}>
@@ -250,18 +245,18 @@ const Home = () => {
 
           {/* Social Icons */}
           <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', mb: 3 }}>
-            <IconButton
+            {/* <IconButton
               component="a"
               href="https://www.instagram.com/your-username" 
               target="_blank"
               rel="noopener noreferrer"
             >
               <InstagramIcon />
-            </IconButton>
+            </IconButton> */}
 
             <IconButton
               component="a"
-              href="https://www.linkedin.com/in/latha-kumpatla-912188228/"
+              href="https://www.linkedin.com/in/sreenivas-bandapu-79a382382/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -270,7 +265,7 @@ const Home = () => {
 
             <IconButton
               component="a"
-              href="https://github.com/Lathakumpatla" 
+              href="https://github.com/sreenivas1305" 
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -309,15 +304,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <Typography variant="body1" color="text.secondary" sx={{ wordWrap: 'break-word' }}>
-                <strong>Web & Mobile Application Developer</strong> with a passion for building
-                <strong> GIS platforms</strong> focused on <strong>sustainability and environmental monitoring</strong>.
-                My expertise lies in developing <strong>WebGIS solutions using React, TypeScript, and MUI</strong>,
-                and crafting <strong>mobile applications with React Native</strong> for critical field data
-                collection and community engagement. I specialize in integrating geospatial
-                services (WMS/WFS from GeoServer), creating interactive dashboards with
-                spatial insights, and ensuring robust data quality. I'm driven by the
-                desire to leverage modern web mapping libraries and cloud-based GIS tools
-                to create impactful solutions.
+                Product-focused Front-End Engineer with 3+ years of experience building scalable, high-performance web applications for enterprise, government, and data-driven platforms. Strong expertise in React, TypeScript, and component-driven UI architecture, with hands-on experience leading frontend initiatives, reviewing code, and delivering production-ready solutions. Proven ability to collaborate across teams and own frontend delivery for business-critical applications.
               </Typography>
             </motion.div>
           </Box>
@@ -430,34 +417,7 @@ const Home = () => {
                   Tools & Technologies
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 4 }}>
-                  <motion.div
-                    whileHover={{ scale: 1.05, y: -5, boxShadow: '0 12px 24px rgba(0, 0, 0, 0.6)' }}
-                    transition={{ duration: 0.3 }}
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      minWidth: '100px',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    <Box component="img" src="github.png" alt="GitHub" sx={{ width: 120, height: 60, mb: 1 }} />
-                    <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>GitHub</Typography>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.05, y: -5, boxShadow: '0 12px 24px rgba(0, 0, 0, 0.6)' }}
-                    transition={{ duration: 0.3 }}
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      minWidth: '100px',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    <Box component="img" src="vscode.png" alt="VS Code" sx={{ width: 60, height: 60, mb: 1 }} />
-                    <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>VS Code</Typography>
-                  </motion.div>
+            
                   <motion.div
                     whileHover={{ scale: 1.05, y: -5, boxShadow: '0 12px 24px rgba(0, 0, 0, 0.6)' }}
                     transition={{ duration: 0.3 }}
@@ -514,6 +474,34 @@ const Home = () => {
                     <Box component="img" src="mui.png" alt="MUI" sx={{ width: 60, height: 60, mb: 1 }} />
                     <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>MUI</Typography>
                   </motion.div>
+                        <motion.div
+                    whileHover={{ scale: 1.05, y: -5, boxShadow: '0 12px 24px rgba(0, 0, 0, 0.6)' }}
+                    transition={{ duration: 0.3 }}
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      minWidth: '100px',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <Box component="img" src="github.png" alt="GitHub" sx={{ width: 120, height: 60, mb: 1 }} />
+                    <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>GitHub</Typography>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.05, y: -5, boxShadow: '0 12px 24px rgba(0, 0, 0, 0.6)' }}
+                    transition={{ duration: 0.3 }}
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      minWidth: '100px',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <Box component="img" src="vscode.png" alt="VS Code" sx={{ width: 60, height: 60, mb: 1 }} />
+                    <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>VS Code</Typography>
+                  </motion.div>
                 </Box>
               </Box>
             </Box>
@@ -569,14 +557,14 @@ const Home = () => {
     variant="h5"
     sx={{ color: theme.palette.text.primary }}
   >
-    (Web & Mobile Application Developer)
+    Front-End Engineer
   </Typography>
 </Box>
 
 
 
               <Typography variant="subtitle1" sx={{ color: theme.palette.text.secondary, mb: 2 }}>
-                July 2023 – Present
+                Oct 2022 – Present
               </Typography>
 
               <List sx={{ color: theme.palette.text.secondary }}>
@@ -585,7 +573,7 @@ const Home = () => {
                     <CheckCircleIcon fontSize="small" />
                   </ListItemIcon>
                   <ListItemText
-                    primary="As a web and mobile application developer, I design and build GIS platforms focused on sustainability and environmental monitoring."
+                    primary="Developed and maintained production-grade front-end applications using React, TypeScript, and Material UI for enterprise and government clients."
                   />
                 </ListItem>
                 <ListItem sx={{ paddingLeft: 0, paddingTop: 0, paddingBottom: 0 }}>
@@ -593,7 +581,7 @@ const Home = () => {
                     <CheckCircleIcon fontSize="small" />
                   </ListItemIcon>
                   <ListItemText
-                    primary="I develop WebGIS solutions using React, TypeScript, and MUI, and create mobile apps with React Native for field data collection and community engagement."
+                    primary="Implemented reusable component libraries and shared UI patterns, improving maintainability and development efficiency."
                   />
                 </ListItem>
                 <ListItem sx={{ paddingLeft: 0, paddingTop: 0, paddingBottom: 0 }}>
@@ -601,7 +589,7 @@ const Home = () => {
                     <CheckCircleIcon fontSize="small" />
                   </ListItemIcon>
                   <ListItemText
-                    primary="My work includes integrating geospatial services like WMS and WFS from GeoServer, and collaborating with experts for tools such as hazard maps and biodiversity tracking."
+                    primary="Optimized application performance using memoization, lazy loading, and efficient state management, achieving 45% faster page load times."
                   />
                 </ListItem>
                 <ListItem sx={{ paddingLeft: 0, paddingTop: 0, paddingBottom: 0 }}>
@@ -609,7 +597,7 @@ const Home = () => {
                     <CheckCircleIcon fontSize="small" />
                   </ListItemIcon>
                   <ListItemText
-                    primary="I develop dashboards with interactive charts and spatial insights to aid decision-making."
+                    primary="Built responsive, cross-browser compatible user interfaces aligned with UX and accessibility best practices."
                   />
                 </ListItem>
                 <ListItem sx={{ paddingLeft: 0, paddingTop: 0, paddingBottom: 0 }}>
@@ -617,7 +605,7 @@ const Home = () => {
                     <CheckCircleIcon fontSize="small" />
                   </ListItemIcon>
                   <ListItemText
-                    primary="I manage and process spatial datasets, ensuring data quality and validation with local agencies."
+                    primary="Managed complex application state and asynchronous data flows using Redux Toolkit, Context API, and React Hooks."
                   />
                 </ListItem>
                 <ListItem sx={{ paddingLeft: 0, paddingTop: 0, paddingBottom: 0 }}>
@@ -625,7 +613,23 @@ const Home = () => {
                     <CheckCircleIcon fontSize="small" />
                   </ListItemIcon>
                   <ListItemText
-                    primary="I also support platform deployment, training, and documentation. My approach leverages modern web mapping libraries and cloud-based GIS tools."
+                    primary="Integrated RESTful APIs and third-party services to deliver reliable, data-driven user experiences."
+                  />
+                </ListItem>
+                <ListItem sx={{ paddingLeft: 0, paddingTop: 0, paddingBottom: 0 }}>
+                  <ListItemIcon sx={{ minWidth: 'auto', mr: 1, color: theme.palette.success.main }}>
+                    <CheckCircleIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Deployed applications on Linux-based servers using shell scripting to automate build and hosting workflows."
+                  />
+                </ListItem>
+                <ListItem sx={{ paddingLeft: 0, paddingTop: 0, paddingBottom: 0 }}>
+                  <ListItemIcon sx={{ minWidth: 'auto', mr: 1, color: theme.palette.success.main }}>
+                    <CheckCircleIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Actively collaborated with designers, backend engineers, and stakeholders to translate business requirements into technical implementations."
                   />
                 </ListItem>
               </List>
@@ -806,14 +810,27 @@ const SkillsSection = () => {
   const theme = useTheme();
 
   const skillsData = [
-    { name: 'HTML 5', percentage: 100, color: '#ff9800' },
-    { name: 'JavaScript', percentage: 95, color: '#ffeb3b' },
-    { name: 'CSS', percentage: 95, color: '#4285f4' },
-    { name: 'ReactJs', percentage: 88, color: '#80d8ff' },
-    { name: 'React Native', percentage: 95, color: '#8bc34a' },
-    { name: 'Git', percentage: 90, color: '#f1502f' },
-    { name: 'Next.js', percentage: 85, color: '#000000' },
-    { name: 'MUI', percentage: 90, color: '#007fff' },
+    { name: 'React.js', percentage: 95, color: '#61dafb' },
+    { name: 'TypeScript', percentage: 90, color: '#3178c6' },
+    { name: 'Next.js', percentage: 88, color: '#000000' },
+    { name: 'JavaScript (ES6+)', percentage: 95, color: '#f7df1e' },
+    { name: 'HTML5', percentage: 100, color: '#e34f26' },
+    { name: 'CSS3', percentage: 95, color: '#1572b6' },
+    { name: 'Material UI (MUI)', percentage: 90, color: '#007fff' },
+    { name: 'Tailwind CSS', percentage: 85, color: '#06b6d4' },
+    { name: 'Bootstrap', percentage: 80, color: '#7952b3' },
+    { name: 'Redux Toolkit', percentage: 85, color: '#764abc' },
+    { name: 'Context API', percentage: 90, color: '#61dafb' },
+    { name: 'React Hooks', percentage: 95, color: '#61dafb' },
+    { name: 'RESTful APIs', percentage: 90, color: '#ff6b6b' },
+    { name: 'Node.js', percentage: 80, color: '#339933' },
+    { name: 'Jest', percentage: 85, color: '#c21325' },
+    { name: 'React Testing Library', percentage: 85, color: '#e33371' },
+    { name: 'Git', percentage: 95, color: '#f05032' },
+    { name: 'GitHub', percentage: 90, color: '#181717' },
+    { name: 'NPM', percentage: 90, color: '#cb3837' },
+    { name: 'Webpack', percentage: 80, color: '#8dd6f9' },
+    { name: 'Babel', percentage: 75, color: '#f9dc3e' },
   ];
   const [progress, setProgress] = useState(skillsData.map(() => 0));
 
@@ -988,31 +1005,20 @@ const EducationTimeline = () => {
 
   const educationData = [
     {
-      years: "2019 - 2023",
-      degree: "B.Tech",
-      institution:
-        "Rajiv Gandhi University Of Knowledge and Technologies, Ongole",
-      cgpa: "9.2",
-      totalCgpa: 10,
+      years: "2016 - 2019",
+      degree: "Bachelor of Technology (Lateral Entry)",
+      institution: "Miracle Educational Society & Group of Institutes, Vizianagaram, India",
+      cgpa: "65%",
+      totalCgpa: 100,
       barColor: "#f57c00",
     },
-    {
-      years: "2017 - 2019",
-      degree: "Pre University Course",
-      institution:
-        "Rajiv Gandhi University Of Knowledge and Technologies, Ongole",
-      cgpa: "8.39",
-      totalCgpa: 10,
-      barColor: "#4caf50",
-    },
-    {
-      years: "2016 - 2017",
-      degree: "10th",
-      institution: "ZPHS, Nagullanka",
-      additionalInfo: "Secondary School Certificate (SSC)",
-      cgpa: "9.8",
-      totalCgpa: 10,
-      barColor: "#2196f3",
+     {
+      years: "2012 - 2015",
+      degree: "Diploma in Engineering",
+      institution: "Bhasakara Polytechnic College, Vizianagaram, India",
+      cgpa: "77%",
+      totalCgpa: 100,
+      barColor: "#f57c00",
     },
   ];
 
@@ -1070,11 +1076,6 @@ const EducationTimeline = () => {
               <Typography variant="body2" sx={{ mb: 1 }}>
                 {item.institution}
               </Typography>
-              {item.additionalInfo && (
-                <Typography variant="body2" sx={{ mb: 1 }}>
-                  {item.additionalInfo}
-                </Typography>
-              )}
               <CGPAContainer>
                 <Box sx={{ flexGrow: 1, mr: 2 }}>
                   <StyledLinearProgress
@@ -1110,10 +1111,10 @@ const navigationLinks = [
 ];
 
 const socialLinks = [
-  { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/latha-kumpatla-912188228/' },
-  { icon: <WhatsAppIcon />, href: 'https://wa.me/916301774138' },
-  { icon: <PhoneIcon />, href: 'tel:916301774138' }, 
-  { icon: <MailOutlineIcon />, href: 'mailto:kumpatlalatha3@gmail.com' },
+  { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/sreenivas-bandapu-79a382382/' },
+  { icon: <WhatsAppIcon />, href: 'https://wa.me/919392099718' },
+  { icon: <PhoneIcon />, href: 'tel:919392099718' }, 
+  { icon: <MailOutlineIcon />, href: 'mailto:sreenivasbandapu305@gmail.com' },
 ];
 
 const ContactSection = () => {
@@ -1202,10 +1203,10 @@ const ContactSection = () => {
         {/* Footer Text */}
         <Box mt={4}>
           <Typography variant="body1" color="text.primary" mb={1}>
-            Designed & Developed by Latha Kumpatla
+            Designed & Developed by Sreenivas Bandapu
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            © 2025 Latha Kumpatla. All rights reserved.
+            © 2025 Sreenivas Bandapu. All rights reserved.
           </Typography>
         </Box>
       </motion.div>
