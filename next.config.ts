@@ -1,9 +1,6 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/portfolio",
-  assetPrefix: "/portfolio/",
+const nextConfig = {
+  output: 'export',
+  
 };
 
-export default nextConfig;
+module.exports = nextConfig;
