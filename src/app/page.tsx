@@ -38,6 +38,8 @@ import profileImg from '../../assets/profile.jpeg';
 import Preloader from '@/components/preloader';
 import { BackgroundElements } from '@/components/BackgroundElements';
 import { useSelector } from 'react-redux';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+
 
 const flipAnimation = keyframes`
   0% {
@@ -277,6 +279,45 @@ const Home = () => {
           >
             Contact me
           </Button>
+         
+
+
+ {/* Scroll Down Indicator BELOW Contact button */}
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.5 }}
+  style={{
+    marginTop: 24,
+    cursor: 'pointer',
+    display: 'flex',
+    justifyContent: 'center',
+  }}
+  onClick={() =>
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    })
+  }
+>
+  <motion.div
+    animate={{ y: [0, 12, 0] }}
+    transition={{
+      duration: 1.6,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    }}
+  >
+    <ArrowDownwardIcon
+      sx={{
+        fontSize: 36,
+        color: theme.palette.text.secondary,
+        opacity: 0.8,
+      }}
+    />
+  </motion.div>
+</motion.div>
+
         </Box>
 
         {/* About Section */}
