@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import './Preloader.css';
+import './preloader.css';
 
 const Preloader = () => {
   return (
